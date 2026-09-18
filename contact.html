@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head><title>Contact - Golden Crust</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap');
+body{font-family:'Poppins',Arial; margin:0; color:#4a0a0a; position:relative; background:#fff8f0;}
+body::before{content:''; position:fixed; top:0; left:0; right:0; bottom:0; background:url('cake_2_CLEAN.jpg') center/cover; filter:blur(1px); z-index:-2;}
+body::after{content:''; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(255,248,240,0.85); z-index:-1;}
+header{background:linear-gradient(135deg,#800020,#4a0a0a); color:#ffd700; padding:25px; text-align:center; border-bottom:4px solid #D4AF37;}
+header h1{font-family:'Playfair Display',serif; letter-spacing:2px; margin:0;}
+nav{background:#fffaf0; padding:14px; text-align:center; border-bottom:1px solid #D4AF37; position:sticky; top:0;}
+nav a{margin:0 15px; text-decoration:none; color:#800020; font-weight:bold; padding:8px 18px;}
+nav a.active, nav a:hover{background:#800020; color:#D4AF37;}
+.content{max-width:600px; margin:40px auto; background:white; padding:40px; border:1px solid #D4AF37; box-shadow:0 15px 40px rgba(128,0,32,0.15);}
+.content h2{font-family:'Playfair Display',serif; color:#800020; letter-spacing:2px; text-align:center;}
+input, textarea{width:100%; padding:12px; margin:10px 0; border:1px solid #D4AF37; background:#fffaf0; font-family:'Poppins';}
+input:focus, textarea:focus{outline:none; border:2px solid #800020;}
+.btn-gold{background:linear-gradient(135deg,#D4AF37,#b8962e); color:#4a0a0a; padding:15px; border:2px solid #800020; width:100%; font-weight:bold; letter-spacing:2px; cursor:pointer;}
+.btn-gold:hover{background:#800020; color:#D4AF37;}
+footer{background:#4a0a0a; color:#D4AF37; text-align:center; padding:20px; border-top:3px solid #D4AF37; letter-spacing:2px; font-size:12px;}
+</style>
+</head>
+<body>
+<header><h1>GOLDEN CRUST BAKERY</h1><p style="color:#f5e6c8; font-size:11px; letter-spacing:3px;">WHERE LUXURY MEETS TASTE</p></header>
+<nav>
+<a href="index.html">HOME</a>
+<a href="services.html">SERVICES</a>
+<a href="about.html">ABOUT</a>
+<a href="contact.html" class="active">CONTACT</a>
+</nav>
+<div class="content">
+<h2>CONTACT US</h2>
+<p style="text-align:center; color:#8b4513;">Place Orders and Book Consultations</p>
+<br>
+<p>Location: Bloemfontein, Free State</p>
+<p>WhatsApp: 079 142 1234</p>
+<p>Email: tshiamo@goldencrust.co.za</p>
+<br>
+<h3 style="color:#800020; font-family:'Playfair Display'; text-align:center;">REQUEST YOUR CAKE</h3>
+<input type="text" placeholder="Your Name">
+<input type="text" placeholder="Phone or WhatsApp">
+<textarea rows="4" placeholder="Which masterpiece? Eg: Cake 3 - Black 60th Gold"></textarea>
+<button class="btn-gold">SEND REQUEST</button>
+</div>
+<footer>@GOLDEN CRUST BAKERY</footer>
+</body>
+</html>

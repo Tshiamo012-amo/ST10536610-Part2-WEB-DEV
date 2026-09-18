@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head><title>Services - Golden Crust</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap');
+body{font-family:'Poppins',Arial; margin:0; color:#4a0a0a; position:relative; background:#fff8f0;}
+body::before{content:''; position:fixed; top:0; left:0; right:0; bottom:0; background:url('cake_2_CLEAN.jpg') center/cover; filter:blur(1px); z-index:-2;}
+body::after{content:''; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(255,248,240,0.85); z-index:-1;}
+header{background:linear-gradient(135deg,#800020,#4a0a0a); color:#ffd700; padding:25px; text-align:center; border-bottom:4px solid #D4AF37;}
+header h1{font-family:'Playfair Display',serif; letter-spacing:2px; margin:0;}
+nav{background:#fffaf0; padding:14px; text-align:center; border-bottom:1px solid #D4AF37; position:sticky; top:0; z-index:10;}
+nav a{margin:0 15px; text-decoration:none; color:#800020; font-weight:bold; padding:8px 18px;}
+nav a.active, nav a:hover{background:#800020; color:#D4AF37;}
+.content{max-width:1200px; margin:30px auto; padding:20px;}
+.btn-gold{background:linear-gradient(135deg,#D4AF37,#b8962e); color:#4a0a0a; padding:15px 35px; border:2px solid #800020; font-weight:bold; letter-spacing:2px; cursor:pointer;}
+#cakesMenu{display:none; margin-top:40px;}
+.cake-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:25px;}
+.cake-card{background:white; border:1px solid #D4AF37; overflow:hidden; box-shadow:0 10px 30px rgba(128,0,32,0.15);}
+.cake-card img{width:100%; height:350px; object-fit:cover;}
+.cake-card div{padding:15px; text-align:center; background:#fffaf0; border-top:2px solid #D4AF37;}
+footer{background:#4a0a0a; color:#D4AF37; text-align:center; padding:20px; border-top:3px solid #D4AF37; letter-spacing:2px; font-size:12px;}
+</style>
+</head>
+<body>
+<header><h1>GOLDEN CRUST BAKERY</h1></header>
+<nav>
+<a href="index.html">HOME</a>
+<a href="services.html" class="active">SERVICES</a>
+<a href="about.html">ABOUT</a>
+<a href="contact.html">CONTACT</a>
+</nav>
+<div class="content">
+<h2 style="text-align:center; font-family:'Playfair Display',serif; color:#800020; letter-spacing:3px;">OUR SERVICES</h2>
+<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:20px; text-align:center; margin-top:20px;">
+<div style="background:white; padding:25px; border:1px solid #D4AF37;">BIRTHDAY<br><span style="color:#D4AF37;">From R150</span></div>
+<div style="background:white; padding:25px; border:1px solid #D4AF37;">WEDDING<br><span style="color:#D4AF37;">From R800</span></div>
+<div style="background:white; padding:25px; border:1px solid #D4AF37;">THEMED<br><span style="color:#D4AF37;">From R500</span></div>
+<div style="background:white; padding:25px; border:1px solid #D4AF37;">ANY OCCASION<br><span style="color:#D4AF37;">Custom</span></div>
+</div>
+<div style="text-align:center; margin-top:40px;">
+<button id="viewCakesBtn" class="btn-gold">VIEW OUR CAKES</button>
+</div>
+<div id="cakesMenu">
+<h3 style="text-align:center; color:#800020; font-family:'Playfair Display',serif; letter-spacing:2px;">OUR PREVIOUS ORDERS</h3>
+<div class="cake-grid">
+<div class="cake-card"><img src="cake_1_CLEAN.jpg"><div>Chocolate Delight Cake - R450</div></div>
+<div class="cake-card"><img src="cake_2_CLEAN.jpg"><div>Vanilla Cake - R500</div></div>
+<div class="cake-card"><img src="cake_3_CLEAN.jpg"><div>Caramel Cake - R500</div></div>
+<div class="cake-card"><img src="cake_4_CLEAN.jpg"><div>Red Velvet Cake - R200</div></div>
+<div class="cake-card"><img src="cake_5_CLEAN.jpg"><div>Vanilla Cake - R580</div></div>
+<div class="cake-card"><img src="cake_6_CLEAN.jpg"><div>Lemon Cake - R580</div></div>
+<div class="cake-card"><img src="cake_7_CLEAN.jpg"><div>Red Velvet Cake - R220</div></div>
+<div class="cake-card"><img src="cake_8_CLEAN.jpg"><div>Caramel Cake - R540</div></div>
+<div class="cake-card"><img src="cake_9_CLEAN.jpg"><div> Vanilla with Strawberry Bliss Cake - R560</div></div>
+</div>
+</div>
+</div>
+<h2 style="text-align:center; font-family:'Playfair Display',serif; color:#800020; letter-spacing:3px;">FLAVORS & FILLINGS</h2>
+
+<div style="display:flex; justify-content:space-between; max-width:700px; margin:20px auto; text-align:left; gap:40px;">
+
+<div>
+<h3 style="color:#800020;">FLAVORS</h3>
+<p>Chocolate Delight<br>
+Vanilla<br>
+Red Velvet<br>
+Caramel</p>
+</div>
+
+<div>
+<h3 style="color:#800020;">FILLINGS</h3>
+<p>Oreo<br>
+Strawberry Bliss<br>
+Lemon Zest<br>
+Black Forest</p>
+</div>
+
+</div>
+<h2 style="text-align:center; font-family:'Playfair Display',serif; color:#800020; letter-spacing:3px;">DELIVERY & PICKUP</h2>
+<p style="text-align:center;">We offer delivery within Bloemfontein and surrounding areas. For pickup, please contact us to arrange a convenient time.</p>
+<footer>GOLDEN CRUST BAKERY</footer>
+<script>
+document.getElementById('viewCakesBtn').addEventListener('click', function(){
+  var m=document.getElementById('cakesMenu');
+  m.style.display = (m.style.display==='none'||m.style.display==='')?'block':'none';
+  this.innerText = m.style.display==='block'?'HIDE COLLECTION':'VIEW OUR 9 LUXURY CAKES';
+  if(m.style.display==='block') m.scrollIntoView({behavior:'smooth'});
+});
+</script>
+</body>
+</html>

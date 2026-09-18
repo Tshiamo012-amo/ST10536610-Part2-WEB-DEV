@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head><title>Golden Crust Bakery - Home</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap');
+body{font-family:'Poppins',Arial; background:#fff8f0; margin:0; color:#4a0a0a;}
+header{background:linear-gradient(135deg,#800020,#4a0a0a); color:#ffd700; padding:25px; text-align:center; border-bottom:4px solid #D4AF37;}
+header h1{font-family:'Playfair Display',serif; letter-spacing:2px; margin:0;}
+header p{color:#f5e6c8; letter-spacing:3px; font-size:11px; margin-top:5px;}
+nav{background:#fffaf0; padding:14px; text-align:center; border-bottom:1px solid #D4AF37; position:sticky; top:0; z-index:10;}
+nav a{margin:0 15px; text-decoration:none; color:#800020; font-weight:bold; padding:8px 18px; font-size:14px; letter-spacing:1px;}
+nav a.active, nav a:hover{background:#800020; color:#D4AF37;}
+.hero{position:relative; text-align:center; padding:120px 20px; overflow:hidden;}
+.hero::before{content:''; position:absolute; top:0; left:0; right:0; bottom:0; background:url('cake_2_CLEAN.jpg') center/cover; filter:blur(1px); transform:scale(1.1); z-index:0;}
+.hero::after{content:''; position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(255,248,240,0.75); z-index:1;}
+.hero h2, .hero p, .hero a{position:relative; z-index:2;}
+.hero h2{font-family:'Playfair Display',serif; color:#800020; font-size:42px; margin:0;}
+.hero p{color:#6b2c2c; font-size:18px; max-width:600px; margin:15px auto;}
+.btn{background:linear-gradient(135deg,#D4AF37,#b8962e); color:#4a0a0a; padding:16px 40px; border:2px solid #800020; font-weight:bold; letter-spacing:2px; text-decoration:none; display:inline-block;}
+.btn:hover{background:#800020; color:#D4AF37;}
+footer{background:#4a0a0a; color:#D4AF37; text-align:center; padding:20px; border-top:3px solid #D4AF37; letter-spacing:2px; font-size:12px;}
+</style>
+</head>
+<body>
+<header><h1>GOLDEN CRUST BAKERY</h1><p>WHERE LUXURY MEETS TASTE</p></header>
+<nav>
+<a href="index.html" class="active">HOME</a>
+<a href="services.html">SERVICES</a>
+<a href="about.html">ABOUT</a>
+<a href="contact.html">CONTACT</a>
+</nav>
+<div class="hero">
+<h2>THE BEST OF 051</h2>
+<p>Turning Every Special Moment Into Sweet Memories,One Beautiful Cake at a Time.</p><br>
+<a href="services.html" class="btn">VIEW COLLECTION</a>
+</div>
+<footer>@GOLDEN CRUST BAKERY</footer>
+</body>
+</html>
