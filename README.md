@@ -4,7 +4,7 @@
 ## Project Overview
 Golden Crust Bakery is a luxury bakery website based in Bloemfontein. All images are 100% real work from own kitchen (cake_1_CLEAN.jpg to cake_9_CLEAN.jpg). Built with HTML, CSS, and JavaScript for Part 3. Deployed on Netlify.
 
-Live Link: https://your-netlify-link.netlify.app/ (replace after deploy)
+Live Link: https://enchanting-pika-9d31e5.netlify.app
 Repository: https://github.com/Tshiamo012-amo/ST10536610-Part2-WEB-DEV
 
 ## Part 3 Updates (New in Part 3 - Finale)
