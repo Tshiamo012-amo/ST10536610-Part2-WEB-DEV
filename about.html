@@ -1,6 +1,10 @@
 <!DOCTYPE html>
-<html>
-<head><title>About - Golden Crust</title>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Real Cakes Since 2020 - Golden Crust Bakery</title>
+<meta name="description" content="About Golden Crust Bakery Bloemfontein - Since 2020, 100% real cakes from our kitchen, no stock photos.">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap');
 body{font-family:'Poppins',Arial; margin:0; color:#4a0a0a; position:relative; background:#fff8f0;}
@@ -8,38 +12,45 @@ body::before{content:''; position:fixed; top:0; left:0; right:0; bottom:0; backg
 body::after{content:''; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(255,248,240,0.85); z-index:-1;}
 header{background:linear-gradient(135deg,#800020,#4a0a0a); color:#ffd700; padding:25px; text-align:center; border-bottom:4px solid #D4AF37;}
 header h1{font-family:'Playfair Display',serif; letter-spacing:2px; margin:0;}
-header p{color:#f5e6c8; font-size:11px; letter-spacing:3px; margin-top:5px;}
 nav{background:#fffaf0; padding:14px; text-align:center; border-bottom:1px solid #D4AF37; position:sticky; top:0; z-index:10;}
 nav a{margin:0 15px; text-decoration:none; color:#800020; font-weight:bold; padding:8px 18px;}
 nav a.active, nav a:hover{background:#800020; color:#D4AF37;}
 .content{max-width:800px; margin:40px auto; background:white; padding:40px; border:1px solid #D4AF37; box-shadow:0 15px 40px rgba(128,0,32,0.15);}
-.content h2{font-family:'Playfair Display',serif; color:#800020; letter-spacing:2px; text-align:center; border-bottom:2px solid #D4AF37; padding-bottom:15px;}
-.content ul{line-height:30px;}
-footer{background:#4a0a0a; color:#D4AF37; text-align:center; padding:20px; border-top:3px solid #D4AF37; letter-spacing:2px; font-size:12px; margin-top:40px;}
+.accordion{margin-top:30px; border-top:2px solid #D4AF37;}
+.acc-btn{background:#fffaf0; color:#800020; cursor:pointer; padding:18px; width:100%; text-align:left; border:none; border-bottom:1px solid #D4AF37; font-family:'Playfair Display',serif; font-size:16px; transition:0.4s; font-weight:600;}
+.acc-btn:hover, .acc-btn.active{background:#800020; color:#D4AF37;}
+.acc-btn::after{content:'\002B'; float:right;}
+.acc-btn.active::after{content:'\2212';}
+.acc-content{padding:0 18px; background:white; max-height:0; overflow:hidden; transition:max-height 0.4s ease-out;}
+.fade-in{opacity:0; transform:translateY(20px); transition:all 0.8s ease;}
+.fade-in.show{opacity:1; transform:translateY(0);}
+footer{background:#4a0a0a; color:#D4AF37; text-align:center; padding:20px; border-top:3px solid #D4AF37; margin-top:40px;}
 </style>
 </head>
 <body>
-<header><h1>GOLDEN CRUST BAKERY</h1><p>WHERE LUXURY MEETS TASTE</p></header>
-<nav>
-<a href="index.html">HOME</a>
-<a href="services.html">SERVICES</a>
-<a href="about.html" class="active">ABOUT</a>
-<a href="contact.html">CONTACT</a>
-</nav>
-<div class="content">
-<h2>ABOUT US</h2>
+<header><h1>GOLDEN CRUST BAKERY</h1><p style="color:#f5e6c8; font-size:11px; letter-spacing:3px;">WHERE LUXURY MEETS TASTE</p></header>
+<nav><a href="index.html">HOME</a><a href="services.html">SERVICES</a><a href="about.html" class="active">ABOUT</a><a href="enquiry.html">ENQUIRY</a><a href="contact.html">CONTACT</a></nav>
+<div class="content fade-in">
+<h2 style="font-family:'Playfair Display'; color:#800020; text-align:center; border-bottom:2px solid #D4AF37; padding-bottom:15px;">ABOUT US</h2>
 <p style="text-align:center; font-style:italic; color:#8b4513;">Crafting Memories Since 2020</p>
-<br>
-<p>Welcome to <b style="color:#800020;">Golden Crust Bakery</b>, where every cake is made with love, care and creativity. <b style="color:#D4AF37;">Luxury experiences</b>. Every cake you see in our collection is 100 percent REAL work from our kitchen. No stock photos, no fakes.</p>
-<p><b style="color:#800020;">Our MISSION & VISION:</b></p>
-<ul>
-<li><b>Gold Standard Finish</b> -We are a bakery that specializes in cakes. </li>
-<li><b>What You See Is What You Get</b> -We make fresh and delicious cakes. </li>
-<li><b>Premium Ingredients</b> -We use quality ingredients.</li>
-<li><b>Bespoke Luxury</b> -Customers can choose different cake designs and flavours</li>
-</ul>
-<p>Our goal is to make every celebration sweeter.</p>
+<p>Welcome to <b style="color:#800020;">Golden Crust Bakery</b>, where every cake is made with love. Every cake you see is 100% REAL work from our kitchen. No stock photos.</p>
+<ul><li><b>Gold Standard Finish</b> - Specializes in cakes</li><li><b>What You See Is What You Get</b> - Fresh and delicious</li><li><b>Premium Ingredients</b> - Quality ingredients</li><li><b>Bespoke Luxury</b> - Choose designs and flavours</li></ul>
+<h3 style="font-family:'Playfair Display'; color:#800020; text-align:center; margin-top:40px;">FREQUENTLY ASKED QUESTIONS</h3>
+<div class="accordion">
+<button class="acc-btn">Are your cake photos real?</button><div class="acc-content"><p>Yes! All 9 cakes are 100% real work from our kitchen in Bloemfontein. No stock photos.</p></div>
+<button class="acc-btn">Do you deliver in Bloemfontein 051?</button><div class="acc-content"><p>Yes, delivery within Bloemfontein. Free for orders over R500. WhatsApp 079 142 1234.</p></div>
+<button class="acc-btn">How far in advance should I order?</button><div class="acc-content"><p>Birthday: 3 days. Wedding: 2 weeks. Use <a href="enquiry.html" style="color:#800020;">Enquiry page</a> for quote.</p></div>
+<button class="acc-btn">What ingredients do you use?</button><div class="acc-content"><p>Premium: real butter, Belgian chocolate, fresh cream, free-range eggs.</p></div>
 </div>
-<footer>GOLDEN CRUST BAKERY </footer>
+<div style="text-align:center; margin-top:30px;"><a href="services.html" style="background:linear-gradient(135deg,#D4AF37,#b8962e); color:#4a0a0a; padding:12px 30px; border:2px solid #800020; font-weight:bold; text-decoration:none;">VIEW OUR CAKES</a></div>
+</div>
+<footer>GOLDEN CRUST BAKERY</footer>
+<script>
+const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting) e.target.classList.add('show');});});
+document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
+const accBtns=document.getElementsByClassName("acc-btn");
+for(let i=0;i<accBtns.length;i++){accBtns[i].addEventListener("click",function(){this.classList.toggle("active");const content=this.nextElementSibling;if(content.style.maxHeight){content.style.maxHeight=null;}else{content.style.maxHeight=content.scrollHeight+"px";}});}
+if(accBtns[0]) accBtns[0].click();
+</script>
 </body>
 </html>

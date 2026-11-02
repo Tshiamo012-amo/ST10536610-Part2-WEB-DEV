@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enquiry - Get Cake Quote | Golden Crust Bakery</title>
+<meta name="description" content="Enquire for custom cake quote in Bloemfontein.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap');
+body{font-family:'Poppins',Arial; margin:0; color:#4a0a0a; background:#fff8f0;}
+header{background:linear-gradient(135deg,#800020,#4a0a0a); color:#ffd700; padding:25px; text-align:center; border-bottom:4px solid #D4AF37;}
+nav{background:#fffaf0; padding:14px; text-align:center; border-bottom:1px solid #D4AF37; position:sticky; top:0;}
+nav a{margin:0 15px; text-decoration:none; color:#800020; font-weight:bold; padding:8px 18px;}
+nav a.active, nav a:hover{background:#800020; color:#D4AF37;}
+.content{max-width:800px; margin:40px auto; background:white; padding:40px; border:1px solid #D4AF37; box-shadow:0 15px 40px rgba(128,0,32,0.15);}
+input, select, textarea{width:100%; padding:12px; margin:10px 0; border:1px solid #D4AF37; background:#fffaf0; box-sizing:border-box;}
+.error{color:#b00020; font-size:12px; display:none;}
+.btn-gold{background:linear-gradient(135deg,#D4AF37,#b8962e); color:#4a0a0a; padding:15px; border:2px solid #800020; width:100%; font-weight:bold; cursor:pointer;}
+footer{background:#4a0a0a; color:#D4AF37; text-align:center; padding:20px; border-top:3px solid #D4AF37;}
+</style>
+</head>
+<body>
+<header><h1>GOLDEN CRUST BAKERY</h1></header>
+<nav><a href="index.html">HOME</a><a href="services.html">SERVICES</a><a href="about.html">ABOUT</a><a href="enquiry.html" class="active">ENQUIRY</a><a href="contact.html">CONTACT</a></nav>
+<div class="content">
+<h2 style="font-family:'Playfair Display'; color:#800020; text-align:center;">REQUEST YOUR CAKE QUOTE</h2>
+<p style="text-align:center;">For price estimates and bookings - Different from general contact</p>
+<form id="enquiryForm" novalidate>
+<label>Full Name *</label><input type="text" id="eName" required><span class="error" id="eNameError">Enter name</span>
+<label>Email *</label><input type="email" id="eEmail" required><span class="error" id="eEmailError">Valid email</span>
+<label>WhatsApp *</label><input type="tel" id="ePhone" placeholder="079 142 1234" required><span class="error" id="ePhoneError">10 digit number</span>
+<label>Cake Type *</label><select id="eCake" required><option value="">Select Cake</option><option value="Birthday">Birthday - From R150</option><option value="Wedding">Wedding - From R800</option><option value="Chocolate">Chocolate Delight - R450</option><option value="Red Velvet">Red Velvet - R200</option></select>
+<label>Event Date *</label><input type="date" id="eDate" required><span class="error" id="eDateError">Future date needed</span>
+<label>Quantity</label><input type="number" id="eQty" min="1" value="1">
+<label>Details *</label><textarea id="eDetails" rows="4" placeholder="Which masterpiece? Eg: Cake 3 - Black 60th Gold" required></textarea>
+<p id="priceEstimate" style="background:#fffaf0; padding:10px; border:1px dashed #D4AF37; text-align:center; display:none;"></p>
+<button type="submit" class="btn-gold">GET QUOTE - SEND ENQUIRY</button>
+<p id="eSuccess" style="display:none; color:green; text-align:center;">✓ Enquiry sent! Price estimate shown above.</p>
+</form>
+</div>
+<footer>GOLDEN CRUST BAKERY</footer>
+<script>
+document.getElementById('eCake').addEventListener('change',function(){const prices={Birthday:150,Wedding:800,Chocolate:450,"Red Velvet":200};const price=prices[this.value]||0;const qty=document.getElementById('eQty').value||1;if(price>0){const est=document.getElementById('priceEstimate');est.style.display='block';est.textContent=`Estimated: R${price*qty} (R${price} x ${qty})`;}});
+document.getElementById('eQty').addEventListener('input',()=>document.getElementById('eCake').dispatchEvent(new Event('change')));
+document.getElementById('enquiryForm').addEventListener('submit',function(e){e.preventDefault();let valid=true;const phone=document.getElementById('ePhone').value.replace(/\s/g,'');if(phone.length<10||isNaN(phone)){document.getElementById('ePhoneError').style.display='block';valid=false;}else document.getElementById('ePhoneError').style.display='none';const date=new Date(document.getElementById('eDate').value);if(date<new Date()){document.getElementById('eDateError').style.display='block';valid=false;}else document.getElementById('eDateError').style.display='none';if(!valid) return;fetch('https://httpbin.org/post',{method:'POST',body:new FormData(this)}).then(()=>{document.getElementById('eSuccess').style.display='block';this.reset();});});
+</script>
+</body>
+</html>

@@ -1,6 +1,10 @@
 <!DOCTYPE html>
-<html>
-<head><title>Services - Golden Crust</title>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Luxury Cakes & Services | Golden Crust Bakery Bloemfontein</title>
+<meta name="description" content="View our 9 luxury cakes - Chocolate, Red Velvet, Vanilla. Custom birthday, wedding cakes in Bloemfontein. From R150.">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap');
 body{font-family:'Poppins',Arial; margin:0; color:#4a0a0a; position:relative; background:#fff8f0;}
@@ -9,83 +13,55 @@ body::after{content:''; position:fixed; top:0; left:0; right:0; bottom:0; backgr
 header{background:linear-gradient(135deg,#800020,#4a0a0a); color:#ffd700; padding:25px; text-align:center; border-bottom:4px solid #D4AF37;}
 header h1{font-family:'Playfair Display',serif; letter-spacing:2px; margin:0;}
 nav{background:#fffaf0; padding:14px; text-align:center; border-bottom:1px solid #D4AF37; position:sticky; top:0; z-index:10;}
-nav a{margin:0 15px; text-decoration:none; color:#800020; font-weight:bold; padding:8px 18px;}
-nav a.active, nav a:hover{background:#800020; color:#D4AF37;}
+nav a{margin:0 15px; text-decoration:none; color:#800020; font-weight:bold; padding:8px 18px; transition:0.3s;}
+nav a.active, nav a:hover{background:#800020; color:#D4AF37; border-radius:4px;}
 .content{max-width:1200px; margin:30px auto; padding:20px;}
-.btn-gold{background:linear-gradient(135deg,#D4AF37,#b8962e); color:#4a0a0a; padding:15px 35px; border:2px solid #800020; font-weight:bold; letter-spacing:2px; cursor:pointer;}
+.btn-gold{background:linear-gradient(135deg,#D4AF37,#b8962e); color:#4a0a0a; padding:15px 35px; border:2px solid #800020; font-weight:bold; letter-spacing:2px; cursor:pointer; transition:0.3s;}
+.btn-gold:hover{background:#800020; color:#D4AF37; transform:translateY(-2px);}
+.controls{display:none; background:white; padding:20px; border:2px solid #D4AF37; margin:20px 0; justify-content:center; gap:15px; flex-wrap:wrap;}
+.controls input, .controls select{padding:10px; border:1px solid #D4AF37; min-width:200px;}
 #cakesMenu{display:none; margin-top:40px;}
 .cake-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:25px;}
-.cake-card{background:white; border:1px solid #D4AF37; overflow:hidden; box-shadow:0 10px 30px rgba(128,0,32,0.15);}
+.cake-card{background:white; border:1px solid #D4AF37; overflow:hidden; box-shadow:0 10px 30px rgba(128,0,32,0.15); transition:all 0.4s ease; cursor:pointer;}
+.cake-card:hover{transform:translateY(-8px) scale(1.02);}
 .cake-card img{width:100%; height:350px; object-fit:cover;}
 .cake-card div{padding:15px; text-align:center; background:#fffaf0; border-top:2px solid #D4AF37;}
-footer{background:#4a0a0a; color:#D4AF37; text-align:center; padding:20px; border-top:3px solid #D4AF37; letter-spacing:2px; font-size:12px;}
+#lightbox{display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(74,10,10,0.9); justify-content:center; align-items:center; z-index:100; flex-direction:column;}
+#lightbox img{max-width:90%; max-height:80%; border:4px solid #D4AF37;}
+#lightbox p{color:#ffd700; margin-top:15px;}
+#lightboxClose{position:absolute; top:20px; right:30px; color:#D4AF37; font-size:40px; cursor:pointer;}
+footer{background:#4a0a0a; color:#D4AF37; text-align:center; padding:20px; border-top:3px solid #D4AF37; margin-top:40px;}
 </style>
 </head>
 <body>
 <header><h1>GOLDEN CRUST BAKERY</h1></header>
-<nav>
-<a href="index.html">HOME</a>
-<a href="services.html" class="active">SERVICES</a>
-<a href="about.html">ABOUT</a>
-<a href="contact.html">CONTACT</a>
-</nav>
+<nav><a href="index.html">HOME</a><a href="services.html" class="active">SERVICES</a><a href="about.html">ABOUT</a><a href="enquiry.html">ENQUIRY</a><a href="contact.html">CONTACT</a></nav>
 <div class="content">
 <h2 style="text-align:center; font-family:'Playfair Display',serif; color:#800020; letter-spacing:3px;">OUR SERVICES</h2>
 <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:20px; text-align:center; margin-top:20px;">
-<div style="background:white; padding:25px; border:1px solid #D4AF37;">BIRTHDAY<br><span style="color:#D4AF37;">From R150</span></div>
-<div style="background:white; padding:25px; border:1px solid #D4AF37;">WEDDING<br><span style="color:#D4AF37;">From R800</span></div>
-<div style="background:white; padding:25px; border:1px solid #D4AF37;">THEMED<br><span style="color:#D4AF37;">From R500</span></div>
-<div style="background:white; padding:25px; border:1px solid #D4AF37;">ANY OCCASION<br><span style="color:#D4AF37;">Custom</span></div>
+<div style="background:white; padding:25px; border:1px solid #D4AF37;"><strong>BIRTHDAY</strong><br><span style="color:#D4AF37;">From R150</span></div>
+<div style="background:white; padding:25px; border:1px solid #D4AF37;"><strong>WEDDING</strong><br><span style="color:#D4AF37;">From R800</span></div>
+<div style="background:white; padding:25px; border:1px solid #D4AF37;"><strong>THEMED</strong><br><span style="color:#D4AF37;">From R500</span></div>
+<div style="background:white; padding:25px; border:1px solid #D4AF37;"><strong>ANY OCCASION</strong><br><span style="color:#D4AF37;">Custom</span></div>
 </div>
-<div style="text-align:center; margin-top:40px;">
-<button id="viewCakesBtn" class="btn-gold">VIEW OUR CAKES</button>
+<div style="text-align:center; margin-top:40px;"><button id="viewCakesBtn" class="btn-gold">VIEW OUR 9 LUXURY CAKES</button></div>
+<div id="controls" class="controls"><input type="text" id="searchInput" placeholder="Search cakes..."><select id="flavorFilter"><option value="all">All Flavors</option><option value="Chocolate">Chocolate</option><option value="Vanilla">Vanilla</option><option value="Red Velvet">Red Velvet</option><option value="Caramel">Caramel</option><option value="Lemon">Lemon</option></select><select id="sortPrice"><option value="default">Sort by Price</option><option value="low">Low to High</option><option value="high">High to Low</option></select></div>
+<div id="cakesMenu"><h3 style="text-align:center; color:#800020; font-family:'Playfair Display',serif;">OUR PREVIOUS ORDERS</h3><div id="cakeGrid" class="cake-grid"></div></div>
 </div>
-<div id="cakesMenu">
-<h3 style="text-align:center; color:#800020; font-family:'Playfair Display',serif; letter-spacing:2px;">OUR PREVIOUS ORDERS</h3>
-<div class="cake-grid">
-<div class="cake-card"><img src="cake_1_CLEAN.jpg"><div>Chocolate Delight Cake - R450</div></div>
-<div class="cake-card"><img src="cake_2_CLEAN.jpg"><div>Vanilla Cake - R500</div></div>
-<div class="cake-card"><img src="cake_3_CLEAN.jpg"><div>Caramel Cake - R500</div></div>
-<div class="cake-card"><img src="cake_4_CLEAN.jpg"><div>Red Velvet Cake - R200</div></div>
-<div class="cake-card"><img src="cake_5_CLEAN.jpg"><div>Vanilla Cake - R580</div></div>
-<div class="cake-card"><img src="cake_6_CLEAN.jpg"><div>Lemon Cake - R580</div></div>
-<div class="cake-card"><img src="cake_7_CLEAN.jpg"><div>Red Velvet Cake - R220</div></div>
-<div class="cake-card"><img src="cake_8_CLEAN.jpg"><div>Caramel Cake - R540</div></div>
-<div class="cake-card"><img src="cake_9_CLEAN.jpg"><div> Vanilla with Strawberry Bliss Cake - R560</div></div>
-</div>
-</div>
-</div>
-<h2 style="text-align:center; font-family:'Playfair Display',serif; color:#800020; letter-spacing:3px;">FLAVORS & FILLINGS</h2>
-
-<div style="display:flex; justify-content:space-between; max-width:700px; margin:20px auto; text-align:left; gap:40px;">
-
-<div>
-<h3 style="color:#800020;">FLAVORS</h3>
-<p>Chocolate Delight<br>
-Vanilla<br>
-Red Velvet<br>
-Caramel</p>
-</div>
-
-<div>
-<h3 style="color:#800020;">FILLINGS</h3>
-<p>Oreo<br>
-Strawberry Bliss<br>
-Lemon Zest<br>
-Black Forest</p>
-</div>
-
-</div>
-<h2 style="text-align:center; font-family:'Playfair Display',serif; color:#800020; letter-spacing:3px;">DELIVERY & PICKUP</h2>
-<p style="text-align:center;">We offer delivery within Bloemfontein and surrounding areas. For pickup, please contact us to arrange a convenient time.</p>
+<h2 style="text-align:center; font-family:'Playfair Display',serif; color:#800020;">FLAVORS & FILLINGS</h2>
+<div style="display:flex; justify-content:space-between; max-width:700px; margin:20px auto; background:white; padding:20px; border:1px solid #D4AF37; gap:40px;"><div><h3 style="color:#800020;">FLAVORS</h3><p>Chocolate Delight<br>Vanilla<br>Red Velvet<br>Caramel</p></div><div><h3 style="color:#800020;">FILLINGS</h3><p>Oreo<br>Strawberry Bliss<br>Lemon Zest<br>Black Forest</p></div></div>
+<div id="lightbox"><span id="lightboxClose">&times;</span><img id="lightboxImg" src="" alt="Luxury Cake"><p id="lightboxCaption"></p></div>
 <footer>GOLDEN CRUST BAKERY</footer>
 <script>
-document.getElementById('viewCakesBtn').addEventListener('click', function(){
-  var m=document.getElementById('cakesMenu');
-  m.style.display = (m.style.display==='none'||m.style.display==='')?'block':'none';
-  this.innerText = m.style.display==='block'?'HIDE COLLECTION':'VIEW OUR 9 LUXURY CAKES';
-  if(m.style.display==='block') m.scrollIntoView({behavior:'smooth'});
-});
+const cakes = [{id:1, name:"Chocolate Delight Cake", price:450, flavor:"Chocolate", img:"cake_1_CLEAN.jpg", alt:"Chocolate Delight Cake luxury - Golden Crust Bakery Bloemfontein"},{id:2, name:"Vanilla Dream Cake", price:500, flavor:"Vanilla", img:"cake_2_CLEAN.jpg", alt:"Vanilla Dream Cake"},{id:3, name:"Caramel Bliss Cake", price:500, flavor:"Caramel", img:"cake_3_CLEAN.jpg", alt:"Caramel Bliss Cake"},{id:4, name:"Red Velvet Classic", price:200, flavor:"Red Velvet", img:"cake_4_CLEAN.jpg", alt:"Red Velvet Cake Classic"},{id:5, name:"Vanilla Premium Cake", price:580, flavor:"Vanilla", img:"cake_5_CLEAN.jpg", alt:"Vanilla Premium"},{id:6, name:"Lemon Zest Cake", price:580, flavor:"Lemon", img:"cake_6_CLEAN.jpg", alt:"Lemon Zest"},{id:7, name:"Red Velvet Mini", price:220, flavor:"Red Velvet", img:"cake_7_CLEAN.jpg", alt:"Red Velvet Mini"},{id:8, name:"Caramel Supreme", price:540, flavor:"Caramel", img:"cake_8_CLEAN.jpg", alt:"Caramel Supreme"},{id:9, name:"Vanilla Strawberry Bliss", price:560, flavor:"Vanilla", img:"cake_9_CLEAN.jpg", alt:"Vanilla Strawberry Bliss"}];
+let currentList=[...cakes];
+function renderCakes(list){const grid=document.getElementById('cakeGrid');grid.innerHTML=list.map(cake=>`<div class="cake-card"><img src="${cake.img}" alt="${cake.alt}" loading="lazy"><div><strong>${cake.name}</strong><br><span style="color:#800020;">R${cake.price}</span></div></div>`).join('');grid.querySelectorAll('.cake-card').forEach((card,index)=>{card.addEventListener('click',()=>{const cake=list[index];document.getElementById('lightboxImg').src=cake.img;document.getElementById('lightboxCaption').textContent=`${cake.name} - R${cake.price}`;document.getElementById('lightbox').style.display='flex';});});}
+renderCakes(cakes);
+document.getElementById('viewCakesBtn').addEventListener('click',function(){var m=document.getElementById('cakesMenu');var controls=document.getElementById('controls');const isHidden=m.style.display==='none'||m.style.display==='';m.style.display=isHidden?'block':'none';controls.style.display=isHidden?'flex':'none';this.innerText=isHidden?'HIDE COLLECTION':'VIEW OUR 9 LUXURY CAKES';if(isHidden) m.scrollIntoView({behavior:'smooth'});});
+document.getElementById('searchInput').addEventListener('input',(e)=>{currentList=cakes.filter(c=>c.name.toLowerCase().includes(e.target.value.toLowerCase())||c.flavor.toLowerCase().includes(e.target.value.toLowerCase()));applyFilters();});
+document.getElementById('flavorFilter').addEventListener('change',applyFilters);document.getElementById('sortPrice').addEventListener('change',applyFilters);
+function applyFilters(){let filtered=[...currentList];const flavor=document.getElementById('flavorFilter').value;if(flavor!=='all') filtered=filtered.filter(c=>c.flavor===flavor);const sort=document.getElementById('sortPrice').value;if(sort==='low') filtered.sort((a,b)=>a.price-b.price);if(sort==='high') filtered.sort((a,b)=>b.price-a.price);if(document.getElementById('searchInput').value===''){filtered=[...cakes];if(flavor!=='all') filtered=filtered.filter(c=>c.flavor===flavor);if(sort==='low') filtered.sort((a,b)=>a.price-b.price);if(sort==='high') filtered.sort((a,b)=>b.price-a.price);}renderCakes(filtered);}
+document.getElementById('lightboxClose').onclick=()=>document.getElementById('lightbox').style.display='none';document.getElementById('lightbox').onclick=(e)=>{if(e.target.id==='lightbox'||e.target.id==='lightboxClose') document.getElementById('lightbox').style.display='none';}
 </script>
 </body>
 </html>

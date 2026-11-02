@@ -1,47 +1,46 @@
 <!DOCTYPE html>
-<html>
-<head><title>Contact - Golden Crust</title>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Golden Crust Bakery Bloemfontein 051</title>
+<meta name="description" content="Contact Golden Crust Bakery in Bloemfontein. WhatsApp 079 142 1234.">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap');
-body{font-family:'Poppins',Arial; margin:0; color:#4a0a0a; position:relative; background:#fff8f0;}
-body::before{content:''; position:fixed; top:0; left:0; right:0; bottom:0; background:url('cake_2_CLEAN.jpg') center/cover; filter:blur(1px); z-index:-2;}
-body::after{content:''; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(255,248,240,0.85); z-index:-1;}
+body{font-family:'Poppins',Arial; margin:0; color:#4a0a0a; background:#fff8f0;}
 header{background:linear-gradient(135deg,#800020,#4a0a0a); color:#ffd700; padding:25px; text-align:center; border-bottom:4px solid #D4AF37;}
-header h1{font-family:'Playfair Display',serif; letter-spacing:2px; margin:0;}
-nav{background:#fffaf0; padding:14px; text-align:center; border-bottom:1px solid #D4AF37; position:sticky; top:0;}
+nav{background:#fffaf0; padding:14px; text-align:center; border-bottom:1px solid #D4AF37; position:sticky; top:0; z-index:10;}
 nav a{margin:0 15px; text-decoration:none; color:#800020; font-weight:bold; padding:8px 18px;}
 nav a.active, nav a:hover{background:#800020; color:#D4AF37;}
-.content{max-width:600px; margin:40px auto; background:white; padding:40px; border:1px solid #D4AF37; box-shadow:0 15px 40px rgba(128,0,32,0.15);}
-.content h2{font-family:'Playfair Display',serif; color:#800020; letter-spacing:2px; text-align:center;}
-input, textarea{width:100%; padding:12px; margin:10px 0; border:1px solid #D4AF37; background:#fffaf0; font-family:'Poppins';}
-input:focus, textarea:focus{outline:none; border:2px solid #800020;}
-.btn-gold{background:linear-gradient(135deg,#D4AF37,#b8962e); color:#4a0a0a; padding:15px; border:2px solid #800020; width:100%; font-weight:bold; letter-spacing:2px; cursor:pointer;}
-.btn-gold:hover{background:#800020; color:#D4AF37;}
-footer{background:#4a0a0a; color:#D4AF37; text-align:center; padding:20px; border-top:3px solid #D4AF37; letter-spacing:2px; font-size:12px;}
+.content{max-width:800px; margin:40px auto; background:white; padding:40px; border:1px solid #D4AF37; box-shadow:0 15px 40px rgba(128,0,32,0.15);}
+input, textarea, select{width:100%; padding:12px; margin:10px 0; border:1px solid #D4AF37; background:#fffaf0; box-sizing:border-box;}
+.error{color:#b00020; font-size:12px; display:none;}
+.btn-gold{background:linear-gradient(135deg,#D4AF37,#b8962e); color:#4a0a0a; padding:15px; border:2px solid #800020; width:100%; font-weight:bold; cursor:pointer;}
+#map{height:300px; margin-top:20px; border:2px solid #D4AF37;}
+footer{background:#4a0a0a; color:#D4AF37; text-align:center; padding:20px; border-top:3px solid #D4AF37;}
 </style>
 </head>
 <body>
-<header><h1>GOLDEN CRUST BAKERY</h1><p style="color:#f5e6c8; font-size:11px; letter-spacing:3px;">WHERE LUXURY MEETS TASTE</p></header>
-<nav>
-<a href="index.html">HOME</a>
-<a href="services.html">SERVICES</a>
-<a href="about.html">ABOUT</a>
-<a href="contact.html" class="active">CONTACT</a>
-</nav>
+<header><h1>GOLDEN CRUST BAKERY</h1><p style="color:#f5e6c8; font-size:11px;">WHERE LUXURY MEETS TASTE</p></header>
+<nav><a href="index.html">HOME</a><a href="services.html">SERVICES</a><a href="about.html">ABOUT</a><a href="enquiry.html">ENQUIRY</a><a href="contact.html" class="active">CONTACT</a></nav>
 <div class="content">
-<h2>CONTACT US</h2>
-<p style="text-align:center; color:#8b4513;">Place Orders and Book Consultations</p>
-<br>
-<p>Location: Bloemfontein, Free State</p>
-<p>WhatsApp: 079 142 1234</p>
-<p>Email: tshiamo@goldencrust.co.za</p>
-<br>
-<h3 style="color:#800020; font-family:'Playfair Display'; text-align:center;">REQUEST YOUR CAKE</h3>
-<input type="text" placeholder="Your Name">
-<input type="text" placeholder="Phone or WhatsApp">
-<textarea rows="4" placeholder="Which masterpiece? Eg: Cake 3 - Black 60th Gold"></textarea>
-<button class="btn-gold">SEND REQUEST</button>
+<h2 style="font-family:'Playfair Display'; color:#800020; text-align:center;">CONTACT US</h2>
+<p><strong>Location:</strong> Bloemfontein, Free State</p><p><strong>WhatsApp:</strong> 079 142 1234</p><p><strong>Email:</strong> tshiamo@goldencrust.co.za</p>
+<form id="contactForm" novalidate>
+<label>Name *</label><input type="text" id="cName" required><span class="error" id="cNameError">Name min 2 chars</span>
+<label>Email *</label><input type="email" id="cEmail" required><span class="error" id="cEmailError">Valid email needed</span>
+<label>Type *</label><select id="cType" required><option value="">Select</option><option value="general">General</option><option value="feedback">Feedback</option><option value="complaint">Complaint</option></select>
+<label>Message *</label><textarea id="cMessage" rows="4" required></textarea><span class="error" id="cMessageError">10+ chars</span>
+<button type="submit" class="btn-gold">SEND MESSAGE</button>
+<p id="cSuccess" style="display:none; color:green; text-align:center;">✓ Message sent! Reply in 24h.</p>
+</form>
+<h3 style="color:#800020; font-family:'Playfair Display'; margin-top:30px;">Find Us</h3><div id="map"></div>
 </div>
 <footer>@GOLDEN CRUST BAKERY</footer>
+<script>
+var map=L.map('map').setView([-29.0852,26.1596],13);L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);L.marker([-29.0852,26.1596]).addTo(map).bindPopup("<b>Golden Crust Bakery</b><br>Bloemfontein").openPopup();
+document.getElementById('contactForm').addEventListener('submit',function(e){e.preventDefault();let valid=true;const name=document.getElementById('cName').value.trim();const email=document.getElementById('cEmail').value.trim();const msg=document.getElementById('cMessage').value.trim();if(name.length<2){document.getElementById('cNameError').style.display='block';valid=false;}else document.getElementById('cNameError').style.display='none';if(!email.includes('@')||!email.includes('.')){document.getElementById('cEmailError').style.display='block';valid=false;}else document.getElementById('cEmailError').style.display='none';if(msg.length<10){document.getElementById('cMessageError').style.display='block';valid=false;}else document.getElementById('cMessageError').style.display='none';if(!valid) return;fetch('https://httpbin.org/post',{method:'POST',body:new FormData(this)}).then(()=>{document.getElementById('cSuccess').style.display='block';this.reset();});});
+</script>
 </body>
 </html>

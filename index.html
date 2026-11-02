@@ -1,25 +1,48 @@
 <!DOCTYPE html>
-<html>
-<head><title>Golden Crust Bakery - Home</title>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Golden Crust Bakery | Luxury Cakes & Breads in Bloemfontein 051</title>
+<meta name="description" content="Golden Crust Bakery Bloemfontein - Luxury custom cakes, wedding cakes, artisan breads and pastries. Freshly baked in 051. Order online.">
+<meta name="keywords" content="Bakery Bloemfontein, custom cakes Bloemfontein, wedding cakes 051, Golden Crust Bakery, luxury cakes South Africa">
+<meta name="author" content="ST10536610">
+<link rel="canonical" href="https://your-netlify-link.netlify.app/index.html">
+<meta property="og:title" content="Golden Crust Bakery - Where Luxury Meets Taste">
+<meta property="og:description" content="Turning Every Special Moment Into Sweet Memories in Bloemfontein.">
+<meta property="og:image" content="cake_2_CLEAN.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap');
-body{font-family:'Poppins',Arial; background:#fff8f0; margin:0; color:#4a0a0a;}
+body{font-family:'Poppins',Arial; background:#fff8f0; margin:0; color:#4a0a0a; scroll-behavior:smooth;}
 header{background:linear-gradient(135deg,#800020,#4a0a0a); color:#ffd700; padding:25px; text-align:center; border-bottom:4px solid #D4AF37;}
 header h1{font-family:'Playfair Display',serif; letter-spacing:2px; margin:0;}
 header p{color:#f5e6c8; letter-spacing:3px; font-size:11px; margin-top:5px;}
 nav{background:#fffaf0; padding:14px; text-align:center; border-bottom:1px solid #D4AF37; position:sticky; top:0; z-index:10;}
-nav a{margin:0 15px; text-decoration:none; color:#800020; font-weight:bold; padding:8px 18px; font-size:14px; letter-spacing:1px;}
-nav a.active, nav a:hover{background:#800020; color:#D4AF37;}
+nav a{margin:0 15px; text-decoration:none; color:#800020; font-weight:bold; padding:8px 18px; font-size:14px; letter-spacing:1px; transition:0.3s;}
+nav a.active, nav a:hover{background:#800020; color:#D4AF37; border-radius:4px;}
 .hero{position:relative; text-align:center; padding:120px 20px; overflow:hidden;}
 .hero::before{content:''; position:absolute; top:0; left:0; right:0; bottom:0; background:url('cake_2_CLEAN.jpg') center/cover; filter:blur(1px); transform:scale(1.1); z-index:0;}
 .hero::after{content:''; position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(255,248,240,0.75); z-index:1;}
 .hero h2, .hero p, .hero a{position:relative; z-index:2;}
 .hero h2{font-family:'Playfair Display',serif; color:#800020; font-size:42px; margin:0;}
 .hero p{color:#6b2c2c; font-size:18px; max-width:600px; margin:15px auto;}
-.btn{background:linear-gradient(135deg,#D4AF37,#b8962e); color:#4a0a0a; padding:16px 40px; border:2px solid #800020; font-weight:bold; letter-spacing:2px; text-decoration:none; display:inline-block;}
-.btn:hover{background:#800020; color:#D4AF37;}
-footer{background:#4a0a0a; color:#D4AF37; text-align:center; padding:20px; border-top:3px solid #D4AF37; letter-spacing:2px; font-size:12px;}
+.btn{background:linear-gradient(135deg,#D4AF37,#b8962e); color:#4a0a0a; padding:16px 40px; border:2px solid #800020; font-weight:bold; letter-spacing:2px; text-decoration:none; display:inline-block; transition:all 0.4s ease;}
+.btn:hover{background:#800020; color:#D4AF37; transform:translateY(-3px); box-shadow:0 5px 15px rgba(0,0,0,0.2);}
+.fade-in{opacity:0; transform:translateY(20px); transition:all 0.8s ease;}
+.fade-in.show{opacity:1; transform:translateY(0);}
+#testimonials{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; padding:40px; background:#fffaf0;}
+.test-card{border:1px solid #D4AF37; padding:20px; background:white;}
+footer{background:#4a0a0a; color:#D4AF37; text-align:center; padding:30px 20px; border-top:3px solid #D4AF37; letter-spacing:2px; font-size:12px;}
+footer a{color:#f5e6c8; text-decoration:none; margin:0 10px;}
+.modal{display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); justify-content:center; align-items:center; z-index:100;}
+.modal-content{background:#fff8f0; padding:30px; border:3px solid #D4AF37; max-width:400px; text-align:center;}
+@media(max-width:768px){.hero h2{font-size:28px;} nav a{margin:0 5px; padding:6px 10px; font-size:12px;}}
 </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Bakery","name":"Golden Crust Bakery","address":{"@type":"PostalAddress","addressLocality":"Bloemfontein","addressRegion":"Free State","addressCountry":"ZA"},"description":"Luxury cakes and artisan breads in Bloemfontein"}
+</script>
 </head>
 <body>
 <header><h1>GOLDEN CRUST BAKERY</h1><p>WHERE LUXURY MEETS TASTE</p></header>
@@ -27,13 +50,120 @@ footer{background:#4a0a0a; color:#D4AF37; text-align:center; padding:20px; borde
 <a href="index.html" class="active">HOME</a>
 <a href="services.html">SERVICES</a>
 <a href="about.html">ABOUT</a>
+<a href="enquiry.html">ENQUIRY</a>
 <a href="contact.html">CONTACT</a>
 </nav>
 <div class="hero">
 <h2>THE BEST OF 051</h2>
-<p>Turning Every Special Moment Into Sweet Memories,One Beautiful Cake at a Time.</p><br>
+<p>Turning Every Special Moment Into Sweet Memories, One Beautiful Cake at a Time.</p><br>
 <a href="services.html" class="btn">VIEW COLLECTION</a>
+<a href="#" id="openModal" class="btn" style="margin-left:10px; background:white;">TODAY'S SPECIAL</a>
 </div>
-<footer>@GOLDEN CRUST BAKERY</footer>
+<section id="testimonials" class="fade-in">
+<h3 style="grid-column:1/-1; font-family:'Playfair Display'; color:#800020; text-align:center;">What Our Clients Say - Bloemfontein</h3>
+</section>
+<div id="specialModal" class="modal">
+<div class="modal-content">
+<h3 style="color:#800020;">Today's Special</h3>
+<p>Chocolate Ganache Cake - R280 <br> Free delivery in Bloemfontein today only!</p>
+<button id="closeModal" class="btn" style="padding:10px 20px;">Close</button>
+<a href="enquiry.html" class="btn" style="padding:10px 20px;">Enquire Now</a>
+</div>
+</div>
+<footer><p>@GOLDEN CRUST BAKERY - Bloemfontein, Free State</p><p><a href="index.html">Home</a> | <a href="services.html">Services</a> | <a href="https://instagram.com">Instagram</a> | <a href="https://facebook.com">Facebook</a></p></footer>
+<script>
+const observer = new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting) e.target.classList.add('show');});});
+document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
+document.getElementById('openModal').onclick = (e)=>{ e.preventDefault(); document.getElementById('specialModal').style.display='flex'; }
+document.getElementById('closeModal').onclick = ()=> document.getElementById('specialModal').style.display='none';
+window.onclick = (e)=>{ if(e.target.id=='specialModal') e.target.style.display='none'; }
+const reviews = [{name:"Tshiamo M.", text:"Best wedding cake in Bloemfontein! Luxury taste."},{name:"Lebo S.", text:"Their sourdough is authentic, fresh daily at 5am."},{name:"Naledi K.", text:"Ordered for my birthday, delivery was fast in 051."}];
+const container = document.getElementById('testimonials');
+reviews.forEach(r=>{container.innerHTML += `<div class="test-card"><h4 style="color:#800020;">${r.name}</h4><p>"${r.text}"</p></div>`;});
+</script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Golden Crust Bakery | Luxury Cakes & Breads in Bloemfontein 051</title>
+<meta name="description" content="Golden Crust Bakery Bloemfontein - Luxury custom cakes, wedding cakes, artisan breads and pastries. Freshly baked in 051. Order online.">
+<meta name="keywords" content="Bakery Bloemfontein, custom cakes Bloemfontein, wedding cakes 051, Golden Crust Bakery, luxury cakes South Africa">
+<meta name="author" content="ST10536610">
+<link rel="canonical" href="https://your-netlify-link.netlify.app/index.html">
+<meta property="og:title" content="Golden Crust Bakery - Where Luxury Meets Taste">
+<meta property="og:description" content="Turning Every Special Moment Into Sweet Memories in Bloemfontein.">
+<meta property="og:image" content="cake_2_CLEAN.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap');
+body{font-family:'Poppins',Arial; background:#fff8f0; margin:0; color:#4a0a0a; scroll-behavior:smooth;}
+header{background:linear-gradient(135deg,#800020,#4a0a0a); color:#ffd700; padding:25px; text-align:center; border-bottom:4px solid #D4AF37;}
+header h1{font-family:'Playfair Display',serif; letter-spacing:2px; margin:0;}
+header p{color:#f5e6c8; letter-spacing:3px; font-size:11px; margin-top:5px;}
+nav{background:#fffaf0; padding:14px; text-align:center; border-bottom:1px solid #D4AF37; position:sticky; top:0; z-index:10;}
+nav a{margin:0 15px; text-decoration:none; color:#800020; font-weight:bold; padding:8px 18px; font-size:14px; letter-spacing:1px; transition:0.3s;}
+nav a.active, nav a:hover{background:#800020; color:#D4AF37; border-radius:4px;}
+.hero{position:relative; text-align:center; padding:120px 20px; overflow:hidden;}
+.hero::before{content:''; position:absolute; top:0; left:0; right:0; bottom:0; background:url('cake_2_CLEAN.jpg') center/cover; filter:blur(1px); transform:scale(1.1); z-index:0;}
+.hero::after{content:''; position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(255,248,240,0.75); z-index:1;}
+.hero h2, .hero p, .hero a{position:relative; z-index:2;}
+.hero h2{font-family:'Playfair Display',serif; color:#800020; font-size:42px; margin:0;}
+.hero p{color:#6b2c2c; font-size:18px; max-width:600px; margin:15px auto;}
+.btn{background:linear-gradient(135deg,#D4AF37,#b8962e); color:#4a0a0a; padding:16px 40px; border:2px solid #800020; font-weight:bold; letter-spacing:2px; text-decoration:none; display:inline-block; transition:all 0.4s ease;}
+.btn:hover{background:#800020; color:#D4AF37; transform:translateY(-3px); box-shadow:0 5px 15px rgba(0,0,0,0.2);}
+.fade-in{opacity:0; transform:translateY(20px); transition:all 0.8s ease;}
+.fade-in.show{opacity:1; transform:translateY(0);}
+#testimonials{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; padding:40px; background:#fffaf0;}
+.test-card{border:1px solid #D4AF37; padding:20px; background:white;}
+footer{background:#4a0a0a; color:#D4AF37; text-align:center; padding:30px 20px; border-top:3px solid #D4AF37; letter-spacing:2px; font-size:12px;}
+footer a{color:#f5e6c8; text-decoration:none; margin:0 10px;}
+.modal{display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); justify-content:center; align-items:center; z-index:100;}
+.modal-content{background:#fff8f0; padding:30px; border:3px solid #D4AF37; max-width:400px; text-align:center;}
+@media(max-width:768px){.hero h2{font-size:28px;} nav a{margin:0 5px; padding:6px 10px; font-size:12px;}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Bakery","name":"Golden Crust Bakery","address":{"@type":"PostalAddress","addressLocality":"Bloemfontein","addressRegion":"Free State","addressCountry":"ZA"},"description":"Luxury cakes and artisan breads in Bloemfontein"}
+</script>
+</head>
+<body>
+<header><h1>GOLDEN CRUST BAKERY</h1><p>WHERE LUXURY MEETS TASTE</p></header>
+<nav>
+<a href="index.html" class="active">HOME</a>
+<a href="services.html">SERVICES</a>
+<a href="about.html">ABOUT</a>
+<a href="enquiry.html">ENQUIRY</a>
+<a href="contact.html">CONTACT</a>
+</nav>
+<div class="hero">
+<h2>THE BEST OF 051</h2>
+<p>Turning Every Special Moment Into Sweet Memories, One Beautiful Cake at a Time.</p><br>
+<a href="services.html" class="btn">VIEW COLLECTION</a>
+<a href="#" id="openModal" class="btn" style="margin-left:10px; background:white;">TODAY'S SPECIAL</a>
+</div>
+<section id="testimonials" class="fade-in">
+<h3 style="grid-column:1/-1; font-family:'Playfair Display'; color:#800020; text-align:center;">What Our Clients Say - Bloemfontein</h3>
+</section>
+<div id="specialModal" class="modal">
+<div class="modal-content">
+<h3 style="color:#800020;">Today's Special</h3>
+<p>Chocolate Ganache Cake - R280 <br> Free delivery in Bloemfontein today only!</p>
+<button id="closeModal" class="btn" style="padding:10px 20px;">Close</button>
+<a href="enquiry.html" class="btn" style="padding:10px 20px;">Enquire Now</a>
+</div>
+</div>
+<footer><p>@GOLDEN CRUST BAKERY - Bloemfontein, Free State</p><p><a href="index.html">Home</a> | <a href="services.html">Services</a> | <a href="https://instagram.com">Instagram</a> | <a href="https://facebook.com">Facebook</a></p></footer>
+<script>
+const observer = new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting) e.target.classList.add('show');});});
+document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
+document.getElementById('openModal').onclick = (e)=>{ e.preventDefault(); document.getElementById('specialModal').style.display='flex'; }
+document.getElementById('closeModal').onclick = ()=> document.getElementById('specialModal').style.display='none';
+window.onclick = (e)=>{ if(e.target.id=='specialModal') e.target.style.display='none'; }
+const reviews = [{name:"Tshiamo M.", text:"Best wedding cake in Bloemfontein! Luxury taste."},{name:"Lebo S.", text:"Their sourdough is authentic, fresh daily at 5am."},{name:"Naledi K.", text:"Ordered for my birthday, delivery was fast in 051."}];
+const container = document.getElementById('testimonials');
+reviews.forEach(r=>{container.innerHTML += `<div class="test-card"><h4 style="color:#800020;">${r.name}</h4><p>"${r.text}"</p></div>`;});
+</script>
 </body>
 </html>
